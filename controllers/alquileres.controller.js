@@ -57,8 +57,58 @@ const getOneAlq = async (req, res)=>{
     }
 }
 
+const getCostTot = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const collection = db.collection('alquileres');
+
+        const response = await collection.aggregate([{$project : {_id : 0, id_alquiler : 1, costo_Total : 1}}]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
+const getSpcfcDate = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('alquileres');
+
+        const response = await coleccion.find({fecha_Inicio : "2023-07-05"}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
+const getClients = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('alquileres');
+
+        const response = await coleccion.aggregate([
+            {$project : {_id : 0, id_cliente : 1, id_alquiler : 1}},
+            {$lookup : {
+                from : 'clientes',
+                localField : 'id_cliente',
+                foreignField : 'id_Cliente',
+                as : 'cliente'
+            }}
+        ]).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
 export {
     getAvAlq,
     getActiveAlq,
-    getOneAlq
+    getOneAlq,
+    getCostTot,
+    getSpcfcDate,
+    getClients
 }

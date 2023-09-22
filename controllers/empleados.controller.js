@@ -13,6 +13,20 @@ const getAllVendors = async (req, res)=>{
     }
 }
 
+const getGerOrAs = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('empleados');
+
+        const response = await coleccion.find({$or : [{cargo : "Gerente"}, {cargo : "Asistente"}]}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
 export {
-    getAllVendors
+    getAllVendors,
+    getGerOrAs
 }
