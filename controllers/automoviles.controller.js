@@ -31,7 +31,7 @@ const getLess5Disp = async (req, res)=>{
         const db = await conexion();
         const coleccion = db.collection('automoviles');
 
-        const response = await coleccion.find({capacidad : {$lte : 5}, disponible : true}).toArray();
+        const response = await coleccion.find({capacidad : 5, disponible : true}).toArray();
 
         res.json(response);
     } catch (error) {

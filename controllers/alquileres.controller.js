@@ -117,6 +117,24 @@ const getAllAlq = async (req, res)=>{
     }
 }
 
+const getByDate = async(req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('alquileres');
+
+        const response = await coleccion.find(
+            {$and : [
+                {fecha_Inicio : {$gte : "2023-07-05"}},
+                {fecha_Inicio : {$lte : "2023-07-10"}}
+            ]
+        }).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+}
+
 export {
     getAvAlq,
     getActiveAlq,
@@ -124,5 +142,6 @@ export {
     getCostTot,
     getSpcfcDate,
     getClients,
-    getAllAlq
+    getAllAlq,
+    getByDate
 }

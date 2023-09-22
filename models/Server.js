@@ -6,6 +6,7 @@ import reservasRouter from "../routes/reservas.routes.js";
 import empleadosRouter from "../routes/empleados.routes.js";
 import sucursalesRouter from "../routes/sucursales.routes.js";
 import automovilesRouter from "../routes/automoviles.routes.js";
+import authsRouter from "../routes/auth.controller.js";
 
 class Server{
 
@@ -22,7 +23,8 @@ class Server{
             reservas : '/reservations',
             empleados : '/employees',
             sucursales : '/sucursales',
-            automoviles : '/cars'
+            automoviles : '/cars',
+            authentications : '/auth'
         }
 
         this.routes();
@@ -45,6 +47,7 @@ class Server{
         this.app.use(this.rutas.empleados, empleadosRouter);
         this.app.use(this.rutas.sucursales, sucursalesRouter);
         this.app.use(this.rutas.automoviles, automovilesRouter);
+        this.app.use(this.rutas.authentications, authsRouter);
     }
 }
 

@@ -1,6 +1,6 @@
 import {Router} from "express";
 
-import {getAvAlq, getActiveAlq, getOneAlq, getCostTot, getSpcfcDate, getClients, getAllAlq} from "../controllers/alquileres.controller.js";
+import {getAvAlq, getActiveAlq, getOneAlq, getCostTot, getSpcfcDate, getClients, getAllAlq, getByDate} from "../controllers/alquileres.controller.js";
 
 const router = Router();
 
@@ -11,5 +11,6 @@ router.get("/totCost", getCostTot);
 router.get("/getByDate", getSpcfcDate);
 router.get("/allClients", getClients);
 router.get("/allAlq", getAllAlq);
+router.get("/specificDate", getByDate);
 
 export default router;
