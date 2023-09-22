@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "2e81268c-e8bc-4b49-900b-568de7912ec8",
+		"name": "Automoviles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28089201",
+		"_collection_link": "https://grey-astronaut-338473.postman.co/workspace/Campus~257b7832-8740-4d4f-be7f-c0f79ce732d1/collection/28089201-2e81268c-e8bc-4b49-900b-568de7912ec8?action=share&source=collection_link&creator=28089201"
+	},
+	"item": [
+		{
+			"name": "GET - endpoint 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/clients/allClientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"clients",
+						"allClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/availAlq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"availAlq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/activeAlq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"activeAlq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/reservations/pendReserv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"reservations",
+						"pendReserv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6996/alquileres/oneAlq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"oneAlq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/employees/allVendors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"employees",
+						"allVendors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/sucursales/dispCars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"sucursales",
+						"dispCars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/totCost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"totCost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dni\" : \"33333333E\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6996/clients/getByDNI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"clients",
+						"getByDNI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/cars/getGt5Ppl",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"cars",
+						"getGt5Ppl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/getByDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"getByDate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 12",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cliente\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6996/clients/clientReserv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"clients",
+						"clientReserv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 13",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/employees/gerOrAs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"employees",
+						"gerOrAs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 14",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/allClients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"allClients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/cars/modPrice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"cars",
+						"modPrice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 16",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/sucursales/sucDircar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"sucursales",
+						"sucDircar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/allAlq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"allAlq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/cars/disp5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"cars",
+						"disp5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - endpoint 19",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6996/alquileres/specificDate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"alquileres",
+						"specificDate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"sofia.gomez@example.com\",\r\n    \"password\" : \"33333333E\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6996/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6996",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
