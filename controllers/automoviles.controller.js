@@ -26,7 +26,21 @@ const getByModPrice = async (req, res)=>{
     }
 }
 
+const getLess5Disp = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('automoviles');
+
+        const response = await coleccion.find({capacidad : {$lte : 5}, disponible : true}).toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
 export {
     getGt5Ppl,
-    getByModPrice
+    getByModPrice,
+    getLess5Disp
 }

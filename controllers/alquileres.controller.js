@@ -104,11 +104,25 @@ const getClients = async (req, res)=>{
     }
 }
 
+const getAllAlq = async (req, res)=>{
+    try {
+        const db = await conexion();
+        const coleccion = db.collection('alquileres');
+
+        const response = await coleccion.find().toArray();
+
+        res.json(response);
+    } catch (error) {
+        res.status(400).json(error.message);
+    }
+}
+
 export {
     getAvAlq,
     getActiveAlq,
     getOneAlq,
     getCostTot,
     getSpcfcDate,
-    getClients
+    getClients,
+    getAllAlq
 }
